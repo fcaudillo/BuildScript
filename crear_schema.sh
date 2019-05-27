@@ -1,0 +1,5 @@
+CREATE SCHEMA $1 AUTHORIZATION adm_$1;
+ALTER USER adm_paciente0 SET search_path = paciente0, public;
+GRANT CONNECT ON DATABASE dbtpv TO adm_paciente0;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA paciente0 TO adm_paciente0;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA paciente0 TO adm_paciente0;
