@@ -2,22 +2,22 @@ from django.contrib.auth.models import User,Group
 from precios.models import Categoria,TipoMovimiento, Compania, Plan, Producto, Configuracion
 import datetime
 from django.contrib.auth.models import User
-admin=User.objects.create_user('$ADMIN_USER', password='$ADMIN_PASS')
+admin=User.objects.create_user('ARG_ADMIN_USER', password='ARG_ADMIN_PASS')
 admin.is_superuser=True
 admin.is_staff=True
 admin.save()
 
 Configuracion.objects.all().delete()
-Configuracion.objects.create(clave="CLIENTE_NOMBRE",valor="$CLIENTE_NOMBRE")
-Configuracion.objects.create(clave="CLIENTE_GIRO", valor="$CLIENTE_GIRO")
-Configuracion.objects.create(clave="CLIENTE_DIRECCION",valor="$CLIENTE_DIRECCION")
-Configuracion.objects.create(clave="TICKET_PIE",valor='$TICKET_PIE')
-Configuracion.objects.create(clave="TAE_USUARIO",valor='$TAE_USER")
-Configuracion.objects.create(clave="TAE_PASSWORD",valor="$TAE_PASS)
+Configuracion.objects.create(clave="CLIENTE_NOMBRE",valor="ARG_CLIENTE_NOMBRE")
+Configuracion.objects.create(clave="CLIENTE_GIRO", valor="ARG_CLIENTE_GIRO")
+Configuracion.objects.create(clave="CLIENTE_DIRECCION",valor="ARG_CLIENTE_DIRECCION")
+Configuracion.objects.create(clave="TICKET_PIE",valor='ARG_TICKET_PIE')
+Configuracion.objects.create(clave="TAE_USUARIO",valor='ARG_TAE_USER")
+Configuracion.objects.create(clave="TAE_PASSWORD",valor="ARG_TAE_PASS)
 
 g_cajero = Group.objects.create(name='Cajero')
 g_master = Group.objects.create(name='Master')
 
-cajero = User.objects.create_user(username='CAJERO_USER', password='$CAJERO_PASS')
+cajero = User.objects.create_user(username='ARG_CAJERO_USER', password='ARG_CAJERO_PASS')
 g_cajero.user_set.add(cajero)
 g_master.user_set.add(admin)
