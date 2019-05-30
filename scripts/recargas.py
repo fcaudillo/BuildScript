@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User,Group
 from precios.models import Categoria,TipoMovimiento, Compania, Plan, Producto, Configuracion
-
+import datetime
 
 cat_tae = Categoria.objects.filter(codigo='TAE')
 
