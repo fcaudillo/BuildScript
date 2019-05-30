@@ -1,4 +1,10 @@
 
+Esta script  crea lo siguiente:
+a) crear el esquema "esquema parametro de la  linea de comando"
+b) crear el usuario adm_esqumea y su password
+c) crear el archivo ejecutable create_schema_"esquema".sh listo para ejecutarse.
+
+./crear_schema.sh esquema password
 
 Para ejecutar el script de creacion del esqueqma
 ./ejecutar_schema.sh paciente0
