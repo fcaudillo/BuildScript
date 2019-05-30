@@ -2,7 +2,7 @@ from django.contrib.auth.models import User,Group
 from precios.models import Categoria,TipoMovimiento, Compania, Plan, Producto, Configuracion
 import datetime
 
-cat_tae = Categoria.objects.filter(codigo='TAE')
+cat_tae = Categoria.objects.filter(codigo='TAE')[0]
 
 telcel = Compania.objects.create(codigo='TELCE',description='TELCEL',imagen='telcel.png', comision=6)
 movistar = Compania.objects.create(codigo='MOVIS',description='MOVISTAR ',imagen='movistar.png', comision=6)
