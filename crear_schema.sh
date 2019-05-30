@@ -1,4 +1,4 @@
-mkdir -p /BuildScript/scripts/$1
+
 echo "CREATE USER adm_$1 WITH LOGIN NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE;" > /BuildScript/scripts/$1/create_schema_$1.sql
 echo "CREATE SCHEMA $1 AUTHORIZATION adm_$1;" >> /BuildScript/scripts/$1/create_schema_$1.sql
 echo "ALTER USER adm_$1 SET search_path = $1, public;" >> /BuildScript/scripts/$1/create_schema_$1.sql

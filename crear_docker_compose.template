@@ -1,0 +1,14 @@
+
+  ARG_CLIENTE_ID:
+    image: fcaudillo/tpv-verde:lts
+    ports:
+      - "ARG_PORT:9000"
+    expose:
+      - ARG_PORT
+    environment:
+      - VIRTUAL_HOST=ARG_CLIENTE_ID.elverde.mx
+      - VIRTUAL_PORT=ARG_PORT
+      - LETSENCRYPT_HOST=ARG_CLIENTE_ID.elverde.mx
+      - LETSENCRYPT_EMAIL=ARG_CLIENTE_ID@gmail.com
+	  
+	  

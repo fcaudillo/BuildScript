@@ -1,4 +1,12 @@
 
+Tareas  a realizar para levantar un negocio:
+
+a)Ejecutar el script crear_schema.sh para crear el escquem  y usuarios para que se conecte a la base de datos.
+b)Modificar el docker-compose  para que  se incluya el subdomino y genere la instancia tlapape para el nuevo negocio.
+ 
+
+
+
 Esta script  crea lo siguiente:
 a) crear el esquema "esquema parametro de la  linea de comando"
 b) crear el usuario adm_esqumea y su password
