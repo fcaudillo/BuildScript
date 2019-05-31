@@ -1,13 +1,25 @@
 version: '2'
 services:
+
+  vol-scripts:
+    image: busybox
+
+  celeryworker:
+    image: fcaudillo/celeryreload	  
+	  
   ARG_CLIENTE_ID:
     image: fcaudillo/tpv-verde:lts
-    ports:
-      - "ARG_PORT:9000"
+    volumes_from:
+      - vol-scripts
+    depends_on:
+      - celeryworker
     expose:
-      - ARG_PORT
+      - 9000
     environment:
       - VIRTUAL_HOST=ARG_CLIENTE_ID.elverde.mx
-      - VIRTUAL_PORT=ARG_PORT
+      - VIRTUAL_PORT=9000
       - LETSENCRYPT_HOST=ARG_CLIENTE_ID.elverde.mx
       - LETSENCRYPT_EMAIL=ARG_CLIENTE_ID@gmail.com
+      - USUARIO_DB=adm_ARG_CLIENTE_ID
+      - PASSWORD_DB=ARG_PASSWORD_DB
+      - CLIENTE_ID=ARG_CLIENTE_ID	
