@@ -1,4 +1,5 @@
-
+version: '2'
+services:
   ARG_CLIENTE_ID:
     image: fcaudillo/tpv-verde:lts
     ports:
