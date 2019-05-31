@@ -5,8 +5,8 @@ services:
     image: busybox
 
   celeryworker:
-    image: fcaudillo/celeryreload	  
-	  
+    image: fcaudillo/celeryreload
+
   ARG_CLIENTE_ID:
     image: fcaudillo/tpv-verde:lts
     volumes_from:
