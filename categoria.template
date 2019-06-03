@@ -1,0 +1,24 @@
+
+from precios.models import Categoria
+
+is_tlapaleria = ARG_TLAPALERIA in ['True','true']
+is_papeleria = ARG_PAPELERIA in ['True','true']
+is_regalos = ARG_REGALOS in ['True','true']
+is_plomeria = ARG_PLOMERIA in ['True','true']
+is_belleza = ARG_BELLEZA in ['True','true']
+
+
+
+raiz = Categoria.objects.create(codigo='UNK', description='Raiz')
+
+if is_papeleria:
+  papeleria = Categoria.objects.create(codigo='PAP', description='PAPELERIA', parent = raiz)
+if is_tlapaleria:
+  tlapaleria =Categoria.objects.create(codigo='TLA', description='TLAPALERIA', parent = raiz)
+if is_belleza:  
+  belleza = Categoria.objects.create(codigo='BELL', description='BELLEZA', parent = raiz)
+if is_plomeria:  
+  plomeria = Categoria.objects.create(codigo='PLO', description='PROMERIA', parent = raiz)  
+ 
+ categoria1 = Categoria.objects.all()[1]
+cat_tae = Categoria.objects.create(codigo='TAE', description='Recarga de tiempo aire', parent = categoria1)
