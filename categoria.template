@@ -20,5 +20,5 @@ if is_belleza:
 if is_plomeria:  
   plomeria = Categoria.objects.create(codigo='PLO', description='PROMERIA', parent = raiz)  
  
- categoria1 = Categoria.objects.all()[1]
+categoria1 = Categoria.objects.all()[1]
 cat_tae = Categoria.objects.create(codigo='TAE', description='Recarga de tiempo aire', parent = categoria1)
