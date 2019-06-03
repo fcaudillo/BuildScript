@@ -8,5 +8,5 @@ sed -e "s/ARG_ADMIN_USER/$1/gI" \
     -e "s/ARG_CLIENTE_NOMBRE/$7/gI" \
     -e "s/ARG_CLIENTE_GIRO/$8/gI" \
     -e "s/ARG_CLIENTE_DIRECCION/$9/gI"  \
-    -e "s/ARG_TICKET_PIE/${10}/gI" crear_usuarios.template > /BuildScript/scripts/${10}/crear_usuarios.py
+    -e "s/ARG_TICKET_PIE/${10}/gI"  /BuildScript/scripts/crear_usuarios.template > /BuildScript/scripts/${11}/crear_usuarios.py
  
