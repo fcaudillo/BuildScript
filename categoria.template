@@ -1,11 +1,11 @@
 
 from precios.models import Categoria
 
-is_tlapaleria = ARG_TLAPALERIA in ['True','true']
-is_papeleria = ARG_PAPELERIA in ['True','true']
-is_regalos = ARG_REGALOS in ['True','true']
-is_plomeria = ARG_PLOMERIA in ['True','true']
-is_belleza = ARG_BELLEZA in ['True','true']
+is_tlapaleria = 'ARG_TLAPALERIA' in ['True','true']
+is_papeleria = 'ARG_PAPELERIA' in ['True','true']
+is_regalos = 'ARG_REGALOS' in ['True','true']
+is_plomeria = 'ARG_PLOMERIA' in ['True','true']
+is_belleza = 'ARG_BELLEZA' in ['True','true']
 
 
 
