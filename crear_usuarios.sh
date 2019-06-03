@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 sed -e "s/ARG_ADMIN_USER/$1/gI" \
     -e "s/ARG_ADMIN_PASS/$2/gI" \
     -e "s/ARG_CAJERO_USER/$3/gI" \
