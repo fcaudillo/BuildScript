@@ -1,16 +1,13 @@
 version: '2'
 services:
 
-  vol-scripts:
-    image: busybox
-
   celeryworker:
     image: fcaudillo/celeryreload
+		
+#inicio nuevo servicio
 
   ARG_CLIENTE_ID:
     image: fcaudillo/tpv-verde:lts
-    volumes_from:
-      - vol-scripts
     depends_on:
       - celeryworker
     expose:
