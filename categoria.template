@@ -20,5 +20,11 @@ if is_belleza:
 if is_plomeria:  
   plomeria = Categoria.objects.create(codigo='PLO', description='PROMERIA', parent = raiz)  
  
-categoria1 = Categoria.objects.all()[1]
+categoria1 = None
+is_categoria = is_papeleria or is_tlapaleria or is_regalos or is_belleza or is_plomeria
+if is_categoria:
+  categoria1 = Categoria.objects.all()[2]
+else:
+  categoria1 = Categoria.objects.all()[1] 
+ 
 cat_tae = Categoria.objects.create(codigo='TAE', description='Recarga de tiempo aire', parent = categoria1)
