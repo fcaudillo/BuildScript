@@ -15,7 +15,7 @@ raiz = Categoria.objects.create(codigo='UNK', description='Raiz')
 if is_papeleria:
   print ("papeleria")
   papeleria = Categoria.objects.create(codigo='PAP', description='PAPELERIA', parent = raiz)
-  print ("papelefina fin"
+  print ("papelefina fin")
 if is_tlapaleria:
   tlapaleria =Categoria.objects.create(codigo='TLA', description='TLAPALERIA', parent = raiz)
 if is_belleza:  
