@@ -1,6 +1,7 @@
 
 from precios.models import Categoria
 
+print ("uno..")
 is_tlapaleria = 'ARG_TLAPALERIA' in ['True','true']
 is_papeleria = 'ARG_PAPELERIA' in ['True','true']
 is_regalos = 'ARG_REGALOS' in ['True','true']
@@ -8,7 +9,7 @@ is_plomeria = 'ARG_PLOMERIA' in ['True','true']
 is_belleza = 'ARG_BELLEZA' in ['True','true']
 
 
-
+print ("dos..")
 raiz = Categoria.objects.create(codigo='UNK', description='Raiz')
 
 if is_papeleria:
@@ -20,11 +21,17 @@ if is_belleza:
 if is_plomeria:  
   plomeria = Categoria.objects.create(codigo='PLO', description='PROMERIA', parent = raiz)  
  
+print ("tres..") 
+
 categoria1 = None
 is_categoria = is_papeleria or is_tlapaleria or is_regalos or is_belleza or is_plomeria
 if is_categoria:
-  categoria1 = Categoria.objects.all()[2]
+  print ("cuatro..") 
+  categoria1 = Categoria.objects.all()[1]
 else:
-  categoria1 = Categoria.objects.all()[1] 
+  print ("cinco..") 
+  categoria1 = Categoria.objects.all()[0] 
  
+print ("seis..") 
 cat_tae = Categoria.objects.create(codigo='TAE', description='Recarga de tiempo aire', parent = categoria1)
+print ("siete..") 
